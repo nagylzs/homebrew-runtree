@@ -6,6 +6,12 @@ class Runtree < Formula
   license "GPL-3.0-only"
   head "https://github.com/nagylzs/runtree.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/nagylzs/homebrew-runtree/releases/download/runtree-0.1.2"
+    sha256 cellar: :any,                 arm64_tahoe:  "515c5213f90f52b0c7a4692f1544a118810b642a25c5de04c3b4995b7e53d91d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "21c156da159e003347076e3936b03227dcb48c3b80753054ea25d1b9e0cc7365"
+  end
+
   depends_on "go" => :build
   depends_on "pkgconf" => :build
   uses_from_macos "python" => :build
